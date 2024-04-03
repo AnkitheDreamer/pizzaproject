@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> PIZZA THE 8848</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Order Form</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    
+</head>
+<body>
+   
+    <header>
+        <div class="logo">
+            <img src="logo.jpej.jpeg" alt="Pizza Company Logo">
+        </div>
+        <h1>PIZZA THE 8848</h1>
+        <h3>Flavours from the himalayas....</h3>
+    </header>
+    <main>
+        <form action="confirm_order.php" method="post">
+            <fieldset>
+                <legend><strong><h1>Order Details </h1>  </strong></legend>
+                <label for="num_pizzas">Number of Pizzas:</label>
+                <input type="number" id="num_pizzas" name="num_pizzas" min="1" required><br>
+
+                <label for="size">Size:</label>
+                <select id="size" name="size">
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                </select><br>
+
+                <label for="shape">Shape:</label><br>
+                <input type="radio" id="round" name="shape" value="round" checked>
+                <label for="round">Round</label><br>
+                <input type="radio" id="square" name="shape" value="square">
+                <label for="square">Square</label><br>
+
+                <label for="toppings">Toppings:</label><br>
+                <input type="checkbox" id="pepperoni" name="toppings[]" value="pepperoni">
+                <label for="pepperoni">Pepperoni</label><br>
+                <input type="checkbox" id="mushrooms" name="toppings[]" value="mushrooms">
+                <label for="mushrooms">Mushrooms</label><br>
+                <input type="checkbox" id="Chicken" name="toppings[]" value="Chicken">
+                <label for="Chicken">Chicken</label><br>
+                <input type="checkbox" id="Cheese" name="toppings[]" value="Cheese">
+                <label for="Cheese">Cheese </label><br>
+
+                <label for="crust">Crust:</label><br>
+                <select id="crust" name="crust">
+                    <option value="deep_dish">Deep Dish</option>
+                    <option value="thin_crust">Thin Crust</option>
+                    <option value="regular">Regular</option>
+                </select><br>
+
+                <label for="delivery">Delivery Method:</label><br>
+                <input type="radio" id="take_out" name="delivery" value="take_out" checked>
+                <label for="take_out">Take Out</label><br>
+                <input type="radio" id="delivery" name="delivery" value="delivery">
+                <label for="delivery">Delivery</label><br>
+                <input type="radio" id="eat_in" name="delivery" value="eat_in">
+                <label for="eat_in">Eat In</label><br>
+
+                
+
+                <label for="phone">Phone Number:</label><br>
+                <input type="tel" id="phone" name="phone" ><br>
+
+                <label for="email">Email Address:</label><br>
+                <input type="email" id="email" name="email" required><br>
+
+                <label for="delivery_date">Preferred Delivery Date:</label><br>
+                <input type="date" id="delivery_date" name="delivery_date"><br>
+
+                <label for="quantity">Quantity:</label><br>
+                <input type="number" id="quantity" name="quantity" min="1" max="10" step="1" value="1"><br>
+
+                <label for="progress">Order Progress:</label><br>
+                <progress id="progress" value="50" max="100"></progress><br>
+
+                <label for="tip">Tip (in CAD):</label><br>
+                <input type="number" id="tip" name="tip" min="0" step="0.01"><br>
+
+                <label for="comments">Additional Comments/ delivery instructions :</label><br>
+                <textarea id="comments" name="comments" rows="4" cols="50"></textarea><br>
+                
+            </fieldset>
+
+            
+            
+            <button type="reset" onclick="resetForm()">Reset</button>
+        </form>
+        <a href="orderconformation.html"> Place order 
+             
+    </main>
+    <footer>
+        <p>&copy; 2024 Pizza The 8848. All rights reserved.</p>
+    </footer>
+</body>
+</html>
